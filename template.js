@@ -1,4 +1,39 @@
 // -------------------------------------
+// task 1
+// -------------------------------------
+
+document.getElementById('form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    let form = document.querySelector("#form");
+    let data = {
+        name: form.querySelector('input[name="name"]').value,
+        email: form.querySelector('input[name="email"]').value,
+        homepage: form.querySelector('input[name="homepage"]').value,
+    }
+    append_to_div("#contacts", data);
+    form.reset();
+})
+
+// append formdata as a template format with target div
+function append_to_div(div_name, data) {
+    // console.log(data)
+    let temp = document.querySelector("#contact-template").content;
+    let targetContainer = document.querySelector(div_name);
+    let clone = temp.cloneNode(true);
+
+    if (data.name) {
+        clone.querySelector("div.contact>h2").textContent = data.name;
+    }
+    if (data.email) {
+        clone.querySelector("div.contact > p.email").textContent = data.email;
+
+    } if (data.homepage) {
+        clone.querySelector("div.contact > p.homepage >a").textContent = data.homepage;
+    }
+    return targetContainer.appendChild(clone);
+};
+
+// -------------------------------------
 // task 2
 // -------------------------------------
 function secondTask() {
