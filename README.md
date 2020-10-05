@@ -4,4 +4,5 @@ This is the repository of given task from Health OS Ltd. There are two task give
 ## Setup Instruction 
 - Clone the repository
 - open the index html file using any browser.
-- You will see the 
+- You will see a form and output of second task.
+- To see the first task out put just filled up the form and submit it. 

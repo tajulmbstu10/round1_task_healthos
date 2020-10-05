@@ -54,7 +54,7 @@ function secondTask() {
 
     // append the output to the html body
     let taskHeader = document.createElement("H1");
-    let headerContent = document.createTextNode("Task 2");
+    let headerContent = document.createTextNode("Task 2 given array " + JSON.stringify(givenArray));
     taskHeader.appendChild(headerContent);
     document.body.appendChild(taskHeader);
 
